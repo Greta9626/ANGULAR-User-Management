@@ -1,0 +1,22 @@
+<form>
+    <div class="form-row">
+      <div class="col">
+        <input [(ngModel)]="user.name" type="text" class="form-control" placeholder="Name" name="name">
+      </div>
+      <div class="col">
+        <input [(ngModel)]="user.username" type="text" class="form-control" placeholder="Username" name="username">
+      </div>
+      <div class="col">
+        <input [(ngModel)]="user.email" type="email" class="form-control" placeholder="Email" name="email">
+      </div>
+      <div class="col">
+        <input [(ngModel)]="user.phone" type="text" class="form-control" placeholder="Phone" name="phone">
+      </div>
+      <div class="col">
+        <input [(ngModel)]="user.website" type="text" class="form-control" placeholder="WebSite" name="website">
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-dark mb-2 form-control" (click)="createUser()">Create</button>
+      </div>
+    </div>
+  </form>

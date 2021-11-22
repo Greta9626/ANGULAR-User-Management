@@ -1,0 +1,23 @@
+<form>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input [(ngModel)]="userUpdate.name" type="text" class="form-control" id="name" name="name">
+    </div>
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input [(ngModel)]="userUpdate.username" type="text" class="form-control" id="username" name="username">
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input [(ngModel)]="userUpdate.email" type="email" class="form-control" id="email" name="email">
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone</label>
+        <input [(ngModel)]="userUpdate.phone" type="text"  class="form-control" id="phone" name="phone">
+    </div>
+    <div class="form-group">
+      <label for="website">Website</label>
+      <input [(ngModel)]="userUpdate.website" type="text" class="form-control" id="website" name="website">
+    </div>
+    <button type="button" class="btn btn-primary form-control" (click)="saveUpdateUser()">Modifica</button>
+</form>

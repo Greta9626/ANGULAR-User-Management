@@ -1,0 +1,32 @@
+<div class="container mt-3">
+    <h1>Users List</h1>
+<!--     <app-create-user></app-create-user> -->
+    <div class="row">
+      <div class="col-sm mt-3">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Username</th>
+              <th scope="col">Email</th>
+              <th scope="col">Phone</th>
+              <th scope="col">WebSite</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr app-user 
+                *ngFor="let user of users" 
+                [user]="user"
+                (userUpdate)="onUpdateUser($event)">
+              <!-- <app-user [user]="user"></app-user> -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-sm-2 mt-3" *ngIf="updateForm">
+        <app-update-user [userUpdate]="user" (userSaveUpdate)="onUserSaveUpdate($event)"></app-update-user>
+      </div>
+    </div>   
+</div>
